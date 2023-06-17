@@ -1,0 +1,400 @@
+canvas {
+  display: block;
+  margin: auto;
+}
+
+body {
+
+  font-family: system-ui;
+  padding: 0;
+  margin: 0;
+  background-color: #001334;
+  background-attachment: fixed;
+  overflow: hidden;
+
+
+}
+
+small {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -1px;
+  color: rgb(221, 221, 221);
+  font-size: 40px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 300;
+  color: inherit;
+  padding: 50px;
+}
+
+p {
+
+  color: rgb(221, 221, 221)
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 2px #F0E68C, 0 0 4px #F0E68C, 0 0 6px #F0E68C,
+      0 0 8px #F0E68C;
+  }
+
+  50% {
+    box-shadow: 0 0 4px #F0E68C, 0 0 8px #F0E68C, 0 0 12px #F0E68C,
+      0 0 16px #F0E68C;
+  }
+
+  100% {
+    box-shadow: 0 0 2px #F0E68C, 0 0 4px #F0E68C, 0 0 6px #F0E68C,
+      0 0 8px #F0E68C;
+  }
+}
+
+.center {
+
+  position: relative;
+  text-align: center;
+  width: 65%;
+  margin: auto;
+  background: black;
+  height: 600px;
+  margin-top: 65px;
+  border-radius: 25px;
+  border: 1.5px solid #FF69B4;
+  animation: glowing3 infinite alternate ease-in-out;
+  animation-duration: 2s;
+}
+
+section {
+  height: 7vh;
+}
+
+/* NAVIGATION */
+@keyframes glowing2 {
+  0% {
+    box-shadow: 0 0 2px #FFFFFF, 0 0 8px #1E90FF, 0 0 6px #1E90FF,
+      0 0 8px #1E90FF;
+  }
+
+  50% {
+    box-shadow: 0 0 4px #1E90FF, 0 0 8px #1E90FF, 0 0 12px #1E90FF,
+      0 0 16px #1E90FF;
+  }
+
+  100% {
+    box-shadow: 0 0 6px #1E90FF, 0 0 4px #1E90FF, 0 0 10px #1E90FF,
+      0 0 8px #1E90FF;
+  }
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #000000, #000029);
+  padding: 8px;
+  box-shadow: 4px -1px -4px #000000ab;
+  animation: glowing2 infinite alternate ease-in-out;
+  animation-duration: 2s;
+}
+
+nav ul {
+  list-style: none;
+
+
+}
+
+nav ul li {
+  display: inline-block;
+  text-align: left;
+
+}
+
+nav ul li a {
+  display: block;
+  padding: 1px;
+  text-decoration: none;
+  color: rgb(221, 221, 221);
+  font-weight: 700;
+  margin: 0 20px;
+}
+
+nav ul li button {
+  display: block;
+  padding: 1px;
+  text-decoration: none;
+  color: rgb(221, 221, 221);
+  font-weight: 700;
+  margin: 0 20px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.metamask-button-container {
+  float: right;
+  margin-right: 55px;
+  margin-top: -10px;
+}
+
+.metamask-button-container button {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #d6d4d4;
+  font-weight: 700;
+  background-color: transparent;
+  border: 3px solid orange;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 18px;
+  animation: glowing4 1500ms infinite;
+  transition: transform .2s ease-in-out;
+}
+
+@keyframes glowing4 {
+  0% {
+    box-shadow: 0 0 5px orange;
+  }
+
+  50% {
+    box-shadow: 0 0 20px orange;
+  }
+
+  100% {
+    box-shadow: 0 0 5px orange;
+  }
+}
+
+.metamask-button-container button:hover {
+  transform: scale(1.05);
+}
+
+.metamask-button-container .connected {
+  border-color: rgb(74, 255, 83);
+  animation-name: glowing-green;
+}
+
+@keyframes glowing-green {
+  0% {
+    box-shadow: 0 0 5px rgb(74, 255, 83);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgb(74, 255, 83)
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgb(74, 255, 83)
+  }
+}
+
+/* slot */
+
+.gamesq {
+
+  width: 630px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 21px;
+  animation: glowing infinite alternate ease-in-out;
+  animation-duration: 2s;
+
+
+
+
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+#gameContainer.hidden {
+  display: none;
+}
+
+#gameContainer.visible {
+  display: flex;
+}
+
+
+
+
+.spins-remaining {
+  margin-top: -15px;
+}
+
+#bloc_page {
+  width: 80%;
+  margin: auto;
+}
+
+
+.top {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+
+}
+
+.sidenav-bottom {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #08080eab;
+}
+
+@keyframes glowing3 {
+  0% {
+    box-shadow: 0 0 2px #FF69B4, 0 0 4px #FF69B4, 0 0 6px #FF69B4,
+      0 0 8px #FF69B4;
+  }
+
+  50% {
+    box-shadow: 0 0 4px #FF69B4, 0 0 8px #FF69B4, 0 0 12px #FF69B4,
+      0 0 16px #FF69B4;
+  }
+
+  100% {
+    box-shadow: 0 0 2px #FF69B4, 0 0 4px #FF69B4, 0 0 6px #FF69B4,
+      0 0 8px #FF69B4;
+  }
+}
+
+.hover-image {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  animation: glowing infinite alternate ease-in-out;
+  animation-duration: 2s;
+}
+
+.hover-image:hover {
+  transform: scale(1.03);
+  transition: transform .3s;
+}
+
+.image-container {
+  position: relative;
+}
+
+
+.metamask-button {
+  text-align: right;
+}
+
+.App-button {
+  
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #d6d4d4;
+  font-weight: 700;
+  background-color: transparent;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  width: 100x;
+  font-size: 12px;
+  animation: glowing5 1500ms infinite;
+  transition: transform .2s ease-in-out;
+}
+
+@keyframes glowing5 {
+  0% {
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+
+  50% {
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+  }
+
+  75% {
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+  }
+}
+
+.App-button:hover {
+  transform: scale(1.05);
+}
+
+.App-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
