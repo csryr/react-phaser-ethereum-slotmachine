@@ -2,6 +2,8 @@
 
 
 
+https://github.com/csryr/react-phaser-ethereum-slotmachine/assets/113220398/293351d2-283c-4b68-bf12-411631d8490f
+
 
 
 Clone the project and in the project directory, you can run:
