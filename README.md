@@ -2,7 +2,10 @@
 
 
 
-https://github.com/csryr/react-phaser-ethereum-slotmachine/assets/113220398/293351d2-283c-4b68-bf12-411631d8490f
+
+https://github.com/csryr/react-phaser-ethereum-slotmachine/assets/113220398/5239ad7c-5f5a-4539-b09e-f14395fb3f29
+
+
 
 
 
